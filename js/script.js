@@ -66,6 +66,74 @@ if (reactProgress && reactValue) {
   }, rjsspeed);
 }
 
+// python progress circular bar
+let pythonProgress = document.querySelector(".python"),
+  pythonValue = document.querySelector(".python-progress");
+if (pythonProgress && pythonValue) {
+  let pythonStart = 0,
+    pythonEnd = 80,
+    pythonspeed = 30;
+  let progressPython = setInterval(() => {
+    pythonStart++;
+    pythonValue.textContent = `${pythonStart}%`;
+    pythonProgress.style.background = `conic-gradient(#fca61f ${
+      pythonStart * 3.6
+    }deg, #ededed 0deg)`;
+    if (pythonStart == pythonEnd) clearInterval(progressPython);
+  }, pythonspeed);
+}
+
+// java progress circular bar
+let javaProgress = document.querySelector(".java"),
+  javaValue = document.querySelector(".java-progress");
+if (javaProgress && javaValue) {
+  let javaStart = 0,
+    javaEnd = 90,
+    javaspeed = 30;
+  let progressJava = setInterval(() => {
+    javaStart++;
+    javaValue.textContent = `${javaStart}%`;
+    javaProgress.style.background = `conic-gradient(#7d2ae8 ${
+      javaStart * 3.6
+    }deg, #ededed 0deg)`;
+    if (javaStart == javaEnd) clearInterval(progressJava);
+  }, javaspeed);
+}
+
+// c++ progress circular bar
+let cplusplusProgress = document.querySelector(".cplusplus"),
+  cplusplusValue = document.querySelector(".cplusplus-progress");
+if (cplusplusProgress && cplusplusValue) {
+  let cppStart = 0,
+    cppEnd = 75,
+    cppspeed = 30;
+  let progressCpp = setInterval(() => {
+    cppStart++;
+    cplusplusValue.textContent = `${cppStart}%`;
+    cplusplusProgress.style.background = `conic-gradient(#20c997 ${
+      cppStart * 3.6
+    }deg, #ededed 0deg)`;
+    if (cppStart == cppEnd) clearInterval(progressCpp);
+  }, cppspeed);
+}
+
+// sql progress circular bar
+let sqlProgress = document.querySelector(".sql"),
+  sqlValue = document.querySelector(".sql-progress");
+if (sqlProgress && sqlValue) {
+  let sqlStart = 0,
+    sqlEnd = 70,
+    sqlspeed = 30;
+  let progressSql = setInterval(() => {
+    sqlStart++;
+    sqlValue.textContent = `${sqlStart}%`;
+    sqlProgress.style.background = `conic-gradient(#3f396d ${
+      sqlStart * 3.6
+    }deg, #ededed 0deg)`;
+    if (sqlStart == sqlEnd) clearInterval(progressSql);
+  }, sqlspeed);
+}
+
 // filter using javascript
 $(document).ready(function () {
   $(".filter-item").click(function () {
